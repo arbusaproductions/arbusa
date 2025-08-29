@@ -1,95 +1,86 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
+import { BRAND, LINKS, DOWNLOADS } from "@/lib/content";
+import { anton } from "./layout";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <main className="min-h-screen flex items-center justify-center px-4">
+      <div className="w-full max-w-xl text-center space-y-8">
+        {/* Avatar */}
+        <div className="flex justify-center">
+          <div className="relative w-[260px] h-[160px] bg-black mx-auto flex items-center justify-center">
             <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src={BRAND.avatar}
+              alt="Arbusa Logo"
+              fill
+              className="object-contain"
+              sizes="(max-width: 420px) 220px, 260px"
             />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        {/* Brand */}
+        <div className="space-y-2">
+          <h1
+            className={`${anton.className} text-3xl md:text-4xl font-extrabold tracking-tight`}
+          >
+            {BRAND.title}
+          </h1>
+          <p className="text-neutral-300">{BRAND.bio}</p>
+        </div>
+
+        {/* Links – Arbusa „Melon“ Look: dunkel, mit grünem Hover */}
+        <div className="grid gap-3">
+          {LINKS.map((l) => (
+            <Link
+              key={l.href + l.label}
+              href={l.href}
+              target="_blank"
+              className="rounded-2xl bg-white/10 hover:bg-white/15 active:bg-white/20 px-5 py-3 text-base font-medium ring-1 ring-white/10 hover:ring-emerald-500/40 transition"
+            >
+              {l.label}
+            </Link>
+          ))}
+        </div>
+
+        {/* Downloads */}
+        <div className="text-left">
+          <h2 className={`${anton.className} text-lg font-semibold mb-3`}>
+            Downloads
+          </h2>
+          <ul className="space-y-2">
+            {DOWNLOADS.map((d) => (
+              <li key={d.file}>
+                <a
+                  href={d.file}
+                  download
+                  className="inline-flex items-center gap-2 text-neutral-200 hover:text-white underline-offset-4 hover:underline"
+                >
+                  <span>⬇️</span>
+                  <span>{d.label}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Footer */}
+        <footer className="pt-6 text-sm text-neutral-400">
+          <div className="flex items-center justify-center gap-4">
+            <Link href="/impressum" className="hover:text-white">
+              Impressum
+            </Link>
+            <span>•</span>
+            <Link href="/datenschutz" className="hover:text-white">
+              Datenschutz
+            </Link>
+          </div>
+          <p className="mt-2">
+            © {new Date().getFullYear()} {BRAND.title}
+          </p>
+        </footer>
+      </div>
+    </main>
   );
 }
