@@ -1,12 +1,5 @@
 import "./globals.css";
-import { Inter, Anton } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"], display: "swap" });
-export const anton = Anton({
-  subsets: ["latin"],
-  weight: "400",
-  display: "swap",
-});
+import { inter } from "./fonts";
 
 export const metadata = { title: "Arbusa" };
 

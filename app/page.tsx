@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BRAND, LINKS, DOWNLOADS } from "@/lib/content";
-import { anton } from "./layout";
+import { anton } from "./fonts";
 
 export default function Home() {
   return (
