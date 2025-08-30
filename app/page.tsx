@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BRAND, LINKS, DOWNLOADS } from "@/lib/content";
+import { BRAND, GENERALLINKS, LINKSFAHRZEUG1, DOWNLOADS } from "@/lib/content";
 import { anton } from "./fonts";
 
 export default function Home() {
@@ -32,7 +32,7 @@ export default function Home() {
 
         {/* Links – Arbusa „Melon“ Look: dunkel, mit grünem Hover */}
         <div className="grid gap-3">
-          {LINKS.map((l) => (
+          {GENERALLINKS.map((l) => (
             <Link
               key={l.href + l.label}
               href={l.href}
@@ -47,9 +47,21 @@ export default function Home() {
         {/* Fahrzeug 1 */}
         <div className="text-left">
           <h2 className={`${anton.className} text-lg font-semibold mb-3`}>
-            Downloads
+            Fahrzeug1
           </h2>
           <ul className="space-y-2">
+            <div className="grid gap-3">
+              {LINKSFAHRZEUG1.map((l) => (
+                <Link
+                  key={l.href + l.label}
+                  href={l.href}
+                  target="_blank"
+                  className="rounded-2xl bg-white/10 hover:bg-white/15 active:bg-white/20 px-5 py-3 text-base font-medium ring-1 ring-white/10 hover:ring-emerald-500/40 transition"
+                >
+                  {l.label}
+                </Link>
+              ))}
+            </div>
             {DOWNLOADS.map((d) => (
               <li key={d.file}>
                 <a
@@ -63,6 +75,7 @@ export default function Home() {
               </li>
             ))}
           </ul>
+          {/* Links – Arbusa „Melon“ Look: dunkel, mit grünem Hover */}
         </div>
 
         {/* Fahrzeug 2 */}
