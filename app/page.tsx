@@ -44,7 +44,28 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Downloads */}
+        {/* Fahrzeug 1 */}
+        <div className="text-left">
+          <h2 className={`${anton.className} text-lg font-semibold mb-3`}>
+            Downloads
+          </h2>
+          <ul className="space-y-2">
+            {DOWNLOADS.map((d) => (
+              <li key={d.file}>
+                <a
+                  href={d.file}
+                  download
+                  className="inline-flex items-center gap-2 text-neutral-200 hover:text-white underline-offset-4 hover:underline"
+                >
+                  <span>⬇️</span>
+                  <span>{d.label}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Fahrzeug 2 */}
         <div className="text-left">
           <h2 className={`${anton.className} text-lg font-semibold mb-3`}>
             Downloads
