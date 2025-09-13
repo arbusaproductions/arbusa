@@ -1,9 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { BRAND, GENERALLINKS, LINKSFAHRZEUG1, DOWNLOADS } from "@/lib/content";
 import { anton } from "./fonts";
+import useYouTubeCount from "@/lib/useYouTubeCount";
+import { useCountUp } from "@/lib/useCountUp"; // <--- NEU
 
 export default function Home() {
+  const ytCount = useYouTubeCount();
+  const animatedCount = useCountUp(ytCount ?? 0, 1000);
+
   return (
     <main className="min-h-screen flex items-center justify-center px-4">
       <div className="w-full max-w-xl text-center space-y-8">
@@ -37,23 +44,63 @@ export default function Home() {
 
         {/* Links – Arbusa „Melon“ Look: dunkel, mit grünem Hover */}
         <div className="grid gap-3">
-          {GENERALLINKS.map((l) => (
-            <Link
-              key={l.href + l.label}
-              href={l.href}
-              target="_blank"
-              className="flex items-center justify-center gap-2 rounded-2xl bg-white/10 hover:bg-white/15 active:bg-white/20 px-5 py-3 text-base font-medium ring-1 ring-white/10 hover:ring-emerald-500/40 transition"
-            >
-              {/* Icon links */}
-              <img src={l.icon} alt={`${l.label} Logo`} className="w-5 h-5" />
+          {GENERALLINKS.map((l) => {
+            if (l.label === "YouTube") {
+              return (
+                <Link
+                  key={l.href + l.label}
+                  href={l.href}
+                  target="_blank"
+                  className="relative flex items-center justify-center gap-2 
+                     rounded-2xl bg-white/10 hover:bg-white/15 active:bg-white/20 
+                     px-5 py-3 text-base font-medium ring-1 ring-white/10 
+                     hover:ring-emerald-500/40 transition"
+                >
+                  {/* Icon + Label (bleibt zentriert) */}
+                  <div className="flex items-center gap-2">
+                    <img
+                      src={l.icon}
+                      alt={`${l.label} Logo`}
+                      className="w-5 h-5"
+                    />
+                    <span>{l.label}</span>
+                  </div>
 
-              {/* Text rechts */}
-              <span>{l.label}</span>
-            </Link>
-          ))}
+                  {/* Badge rechts außen */}
+                  {typeof ytCount === "number" && (
+                    <span
+                      className="absolute right-4 rounded-full 
+               px-3 py-1 text-sm font-extrabold tabular-nums
+               text-black bg-red-500 
+               border border-green-500
+               shadow-[0_0_6px_#22c55e]"
+                    >
+                      {animatedCount.toLocaleString("de-DE")}
+                    </span>
+                  )}
+                </Link>
+              );
+            }
+
+            // Standard-Buttons (TikTok, Instagram usw.)
+            return (
+              <Link
+                key={l.href + l.label}
+                href={l.href}
+                target="_blank"
+                className="flex items-center justify-center gap-2 
+                   rounded-2xl bg-white/10 hover:bg-white/15 active:bg-white/20 
+                   px-5 py-3 text-base font-medium ring-1 ring-white/10 
+                   hover:ring-emerald-500/40 transition"
+              >
+                <img src={l.icon} alt={`${l.label} Logo`} className="w-5 h-5" />
+                <span>{l.label}</span>
+              </Link>
+            );
+          })}
         </div>
 
-        {/* Fahrzeug 1 */}
+        {/* Teileliste */}
         <div className="text-center">
           <h2 className={`${anton.className} text-3xl font-semibold mb-3`}>
             Teileliste
