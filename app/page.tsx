@@ -167,22 +167,6 @@ export default function Home() {
             ))}
           </ul>
         </div> */}
-
-        {/* Footer */}
-        <footer className="pt-6 text-sm text-neutral-400">
-          <div className="flex items-center justify-center gap-4">
-            <Link href="/impressum" className="hover:text-white">
-              Impressum
-            </Link>
-            <span>•</span>
-            <Link href="/datenschutz" className="hover:text-white">
-              Datenschutz
-            </Link>
-          </div>
-          <p className="mt-2">
-            © {new Date().getFullYear()} {BRAND.title}
-          </p>
-        </footer>
       </div>
     </main>
   );
