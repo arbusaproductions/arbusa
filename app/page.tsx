@@ -49,6 +49,15 @@ export default function Home() {
             {BRAND.title}
           </h1>
           <p className="text-neutral-300">{BRAND.bio}</p>
+          <p className="text-neutral-400 text-sm">
+            Cooperations:{" "}
+            <a
+              href="mailto:arbusa.productions@gmail.com"
+              className="text-neutral-200 hover:text-white underline-offset-4 hover:underline"
+            >
+              arbusa.productions@gmail.com
+            </a>
+          </p>
         </div>
 
         {/* Links mit Badges */}
