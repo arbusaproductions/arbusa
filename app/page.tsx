@@ -13,11 +13,11 @@ export default function Home() {
   const animatedCount = useCountUp(ytCount ?? 0, 1000);
 
   // TikTok: statisch
-  const TIKTOK_STATIC_COUNT = 68700;
+  const TIKTOK_STATIC_COUNT = 69800;
   const tiktokAnimated = useCountUp(TIKTOK_STATIC_COUNT, 1000);
 
   // Instagram: statisch
-  const INSTA_STATIC_COUNT = 12400;
+  const INSTA_STATIC_COUNT = 14300;
   const instaAnimated = useCountUp(INSTA_STATIC_COUNT, 1000);
 
   return (
