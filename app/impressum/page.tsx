@@ -8,16 +8,17 @@ export default function Impressum() {
         <p>
           Arbusa Productions GbR
           <br />
-          Gesellschafter: Richard Petrauskas und Thomas Petrauskas
-          <br />
-          Stettiner Straße 41
-          <br />
-          c/o Impressumservice dein-impressum.de
+          c/o Impressumservice Dein-Impressum, Stettiner Str. 41
           <br />
           35410 Hungen
           <br />
           Deutschland
         </p>
+      </section>
+
+      <section>
+        <h2 className="text-lg font-semibold mb-2">Vertreten durch</h2>
+        <p>Richard Petrauskas und Thomas Petrauskas</p>
       </section>
 
       <section>
@@ -34,9 +35,12 @@ export default function Impressum() {
       </section>
 
       <section>
-        <h2 className="text-lg font-semibold mb-2">Umsatzsteuer-ID</h2>
+        <h2 className="text-lg font-semibold mb-2">
+          Umsatzsteuer-Identifikationsnummer
+        </h2>
         <p>
-          Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:
+          Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG i. V. m. § 5 Abs.
+          1 Nr. 6 DDG:
           <br />
           DE464425408
         </p>
@@ -44,11 +48,38 @@ export default function Impressum() {
 
       <section>
         <h2 className="text-lg font-semibold mb-2">
-          Verbraucherstreitbeilegung / Universalschlichtungsstelle
+          Inhaltlich Verantwortlicher
         </h2>
         <p>
-          Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren
-          vor einer Verbraucherschlichtungsstelle teilzunehmen.
+          Verantwortlicher für journalistisch-redaktionelle Inhalte gemäß § 18
+          Abs. 2 MStV:
+          <br />
+          Richard Petrauskas
+          <br />
+          c/o Impressumservice Dein-Impressum, Stettiner Str. 41
+          <br />
+          35410 Hungen
+          <br />
+          Deutschland
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-lg font-semibold mb-2">Verbraucherschlichtung</h2>
+        <p>
+          Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren
+          vor einer Verbraucherschlichtungsstelle teilzunehmen (§ 36 VSBG).
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-lg font-semibold mb-2">Datenschutz</h2>
+        <p>
+          Informationen zum Umgang mit Ihren personenbezogenen Daten finden Sie
+          in unserer Datenschutzerklärung unter:{" "}
+          <a href="/datenschutz" className="underline hover:text-emerald-400">
+            www.arbusaproductions.com/datenschutz
+          </a>
         </p>
       </section>
     </main>
