@@ -54,7 +54,7 @@ export default function Home() {
           <p className="text-neutral-300">{BRAND.bio}</p>
 
           <p className="text-neutral-400 text-sm">
-            Cooperations:{" "}
+            Business inquiries:{" "}
             <a
               href="mailto:arbusa.productions@gmail.com"
               className="text-neutral-200 hover:text-white underline-offset-4 hover:underline"
