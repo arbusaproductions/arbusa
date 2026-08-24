@@ -4,11 +4,11 @@ export default function Impressum() {
       <h1 className="text-2xl font-bold">Impressum</h1>
 
       <section>
-        <h2 className="text-lg font-semibold mb-2">Angaben gemäß § 5 TMG</h2>
+        <h2 className="text-lg font-semibold mb-2">Angaben gemäß § 5 DDG</h2>
         <p>
-          Richard Petrauskas
+          Arbusa Productions GbR
           <br />
-          Arbusa Productions
+          Gesellschafter: Richard Petrauskas und Thomas Petrauskas
           <br />
           Stettiner Straße 41
           <br />
@@ -36,28 +36,9 @@ export default function Impressum() {
       <section>
         <h2 className="text-lg font-semibold mb-2">Umsatzsteuer-ID</h2>
         <p>
-          Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
+          Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:
           <br />
-          DE358476151
-        </p>
-      </section>
-
-      <section>
-        <h2 className="text-lg font-semibold mb-2">EU-Streitschlichtung</h2>
-        <p>
-          Die Europäische Kommission stellt eine Plattform zur
-          Online-Streitbeilegung (OS) bereit:
-          <br />
-          <a
-            href="https://ec.europa.eu/consumers/odr/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-emerald-400"
-          >
-            https://ec.europa.eu/consumers/odr/
-          </a>
-          <br />
-          Unsere E-Mail-Adresse finden Sie oben im Impressum.
+          DE464425408
         </p>
       </section>
 
@@ -70,20 +51,6 @@ export default function Impressum() {
           vor einer Verbraucherschlichtungsstelle teilzunehmen.
         </p>
       </section>
-
-      <footer className="pt-6 text-sm text-neutral-500">
-        <p>
-          Quelle:{" "}
-          <a
-            href="https://www.e-recht24.de"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-emerald-400"
-          >
-            www.e-recht24.de
-          </a>
-        </p>
-      </footer>
     </main>
   );
 }
