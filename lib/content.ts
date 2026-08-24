@@ -1,6 +1,6 @@
 export const BRAND = {
   title: "Arbusa Productions",
-  bio: "Mini Electric Vehicles • Best DIY TikToker of Germany",
+  bio: "Mini Electric Vehicles • DIY Builds • Germany",
   avatar: "/avatar.png", // legst du gleich in /public ab
 };
 
@@ -20,7 +20,7 @@ export const GENERALLINKS = [
     href: "https://youtube.com/@arbusa_productions",
     icon: "/icons/youtube.svg",
   },
-  //{ label: "Shop / Stickers", href: "#" }, // später ersetzen
+  // { label: "Shop / Stickers", href: "#" }, // später ersetzen
 ];
 
 export const LINKSFAHRZEUG1 = [
@@ -64,7 +64,7 @@ export const LINKSFAHRZEUG1 = [
     label: "Elektrische Gasgriffe (z.B. benutzt im Mini-BMX)",
     href: "https://s.click.aliexpress.com/e/_oCf59ZF",
   },
-  //{ label: "Shop / Stickers", href: "#" }, // später ersetzen
+  // { label: "Shop / Stickers", href: "#" }, // später ersetzen
 ];
 
 export const DOWNLOADS = [
