@@ -57,15 +57,27 @@ export default function Datenschutz() {
         </section>
 
         <section>
-          <h2 className="text-lg font-semibold mb-3">3. Hosting der Website</h2>
+          <h2 className="text-lg font-semibold mb-3">
+            3. Hosting durch Vercel
+          </h2>
 
-          <p>Diese Website wird über Vercel bereitgestellt.</p>
+          <p>Diese Website wird über Vercel bereitgestellt. Anbieter ist:</p>
 
           <p className="mt-3">
-            Beim Aufruf unserer Website können durch den Hosting-Anbieter
-            insbesondere technische Verbindungsdaten verarbeitet werden. Dazu
-            können unter anderem IP-Adresse, Datum und Uhrzeit des Zugriffs,
-            aufgerufene Seite, Browsertyp, Betriebssystem und weitere technische
+            Vercel Inc.
+            <br />
+            440 N Barranca Avenue #4133
+            <br />
+            Covina, CA 91723
+            <br />
+            USA
+          </p>
+
+          <p className="mt-3">
+            Beim Aufruf unserer Website können durch Vercel technische
+            Verbindungsdaten verarbeitet werden. Dazu können insbesondere die
+            IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seiten,
+            Browserinformationen, Betriebssystem sowie weitere technische
             Informationen gehören.
           </p>
 
@@ -77,10 +89,24 @@ export default function Datenschutz() {
           </p>
 
           <p className="mt-3">
-            Soweit im Rahmen der Nutzung des Hosting-Dienstes personenbezogene
-            Daten in Staaten außerhalb der Europäischen Union oder des
-            Europäischen Wirtschaftsraums übermittelt werden, erfolgt dies nur
-            unter Beachtung der gesetzlichen Voraussetzungen der DSGVO.
+            Im Rahmen der Nutzung von Vercel kann eine Verarbeitung
+            personenbezogener Daten in den USA stattfinden. Eine solche
+            Übermittlung erfolgt nur unter Beachtung der gesetzlichen
+            Voraussetzungen für internationale Datenübermittlungen.
+          </p>
+
+          <p className="mt-3">
+            Weitere Informationen finden Sie in den Datenschutzinformationen von
+            Vercel unter{" "}
+            <a
+              href="https://vercel.com/legal/privacy-notice"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-emerald-400"
+            >
+              vercel.com/legal/privacy-notice
+            </a>
+            .
           </p>
         </section>
 
@@ -91,7 +117,7 @@ export default function Datenschutz() {
 
           <p>
             Wenn Sie uns per E-Mail kontaktieren, verarbeiten wir die von Ihnen
-            übermittelten Daten zur Bearbeitung Ihrer Anfrage.
+            übermittelten Daten zur Bearbeitung und Beantwortung Ihrer Anfrage.
           </p>
 
           <p className="mt-3">
@@ -147,33 +173,106 @@ export default function Datenschutz() {
           <p>
             Für die technische Übermittlung von Nachrichten aus unserem
             Kontaktformular verwenden wir den E-Mail-Versanddienst Resend.
+            Anbieter ist:
+          </p>
+
+          <p className="mt-3">
+            Plus Five Five, Inc.
+            <br />
+            2261 Market Street #5039
+            <br />
+            San Francisco, CA 94114
+            <br />
+            USA
           </p>
 
           <p className="mt-3">
             Beim Absenden des Kontaktformulars werden die für die Übermittlung
-            erforderlichen Daten an Resend übermittelt. Dazu können insbesondere
-            Ihr Name, Ihre E-Mail-Adresse sowie der Inhalt Ihrer Nachricht
-            gehören.
+            erforderlichen Daten an Resend übermittelt. Dazu gehören
+            insbesondere Ihr Name, Ihre E-Mail-Adresse sowie der Inhalt Ihrer
+            Nachricht.
           </p>
 
           <p className="mt-3">
-            Die Nutzung erfolgt zum Zweck der zuverlässigen technischen
-            Übermittlung und Zustellung von Kontaktanfragen auf Grundlage von
-            Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in
-            einer sicheren und zuverlässigen Kommunikation mit den Nutzern
-            unserer Website.
+            Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f
+            DSGVO. Unser berechtigtes Interesse liegt in der zuverlässigen
+            technischen Übermittlung von Kontaktanfragen.
           </p>
 
           <p className="mt-3">
-            Soweit dabei personenbezogene Daten außerhalb der Europäischen Union
-            oder des Europäischen Wirtschaftsraums verarbeitet werden, erfolgt
-            eine solche Übermittlung nur unter Beachtung der gesetzlichen
-            Voraussetzungen der DSGVO.
+            Resend verarbeitet Daten teilweise in den USA. Für internationale
+            Datenübermittlungen sieht Resend insbesondere
+            Standardvertragsklauseln als geeignete Garantien vor.
+          </p>
+
+          <p className="mt-3">
+            Weitere Informationen finden Sie unter{" "}
+            <a
+              href="https://resend.com/legal/privacy-policy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-emerald-400"
+            >
+              resend.com/legal/privacy-policy
+            </a>
+            .
           </p>
         </section>
 
         <section>
-          <h2 className="text-lg font-semibold mb-3">7. Speicherdauer</h2>
+          <h2 className="text-lg font-semibold mb-3">
+            7. Verarbeitung von Kontaktanfragen über Gmail
+          </h2>
+
+          <p>
+            Kontaktanfragen werden an unser E-Mail-Postfach bei Google
+            weitergeleitet und dort zur Bearbeitung gespeichert.
+          </p>
+
+          <p className="mt-3">
+            Dabei werden insbesondere Name, E-Mail-Adresse, Nachrichteninhalt
+            sowie gegebenenfalls weitere von Ihnen übermittelte Informationen
+            verarbeitet.
+          </p>
+
+          <p className="mt-3">
+            Für Nutzer im Europäischen Wirtschaftsraum werden Google-Dienste
+            grundsätzlich durch Google Ireland Limited bereitgestellt.
+          </p>
+
+          <p className="mt-3">
+            Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f
+            DSGVO. Unser berechtigtes Interesse besteht in einer zuverlässigen
+            Bearbeitung und Verwaltung eingehender Kontaktanfragen. Zielt eine
+            Anfrage auf den Abschluss oder die Durchführung eines Vertrags ab,
+            ist zusätzlich Art. 6 Abs. 1 lit. b DSGVO Rechtsgrundlage.
+          </p>
+
+          <p className="mt-3">
+            Im Rahmen der Nutzung von Google-Diensten kann eine Verarbeitung
+            personenbezogener Daten außerhalb der Europäischen Union bzw. des
+            Europäischen Wirtschaftsraums stattfinden. Eine solche Übermittlung
+            erfolgt nur unter Beachtung der gesetzlichen Voraussetzungen für
+            internationale Datenübermittlungen.
+          </p>
+
+          <p className="mt-3">
+            Weitere Informationen zur Datenverarbeitung durch Google finden Sie
+            unter{" "}
+            <a
+              href="https://policies.google.com/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-emerald-400"
+            >
+              policies.google.com/privacy
+            </a>
+            .
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-lg font-semibold mb-3">8. Speicherdauer</h2>
 
           <p>
             Personenbezogene Daten werden grundsätzlich nur so lange
@@ -191,7 +290,7 @@ export default function Datenschutz() {
 
         <section>
           <h2 className="text-lg font-semibold mb-3">
-            8. SSL- bzw. TLS-Verschlüsselung
+            9. SSL- bzw. TLS-Verschlüsselung
           </h2>
 
           <p>
@@ -204,7 +303,7 @@ export default function Datenschutz() {
         </section>
 
         <section>
-          <h2 className="text-lg font-semibold mb-3">9. Ihre Rechte</h2>
+          <h2 className="text-lg font-semibold mb-3">10. Ihre Rechte</h2>
 
           <p>
             Soweit die jeweiligen gesetzlichen Voraussetzungen erfüllt sind,
@@ -231,7 +330,7 @@ export default function Datenschutz() {
         </section>
 
         <section>
-          <h2 className="text-lg font-semibold mb-3">10. Widerspruchsrecht</h2>
+          <h2 className="text-lg font-semibold mb-3">11. Widerspruchsrecht</h2>
 
           <p>
             Werden personenbezogene Daten auf Grundlage von Art. 6 Abs. 1 lit. f
@@ -243,7 +342,7 @@ export default function Datenschutz() {
 
         <section>
           <h2 className="text-lg font-semibold mb-3">
-            11. Aktualität dieser Datenschutzerklärung
+            12. Aktualität dieser Datenschutzerklärung
           </h2>
 
           <p>Stand: August 2026</p>

@@ -2,10 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { BRAND, GENERALLINKS, LINKSFAHRZEUG1, DOWNLOADS } from "@/lib/content";
+import { BRAND, GENERALLINKS, LINKSFAHRZEUG1 } from "@/lib/content";
 import { anton } from "./fonts";
 import useYouTubeCount from "@/lib/useYouTubeCount";
 import { useCountUp } from "@/lib/useCountUp";
+
+const SHOW_PARTS_LIST = false;
 
 export default function Home() {
   // YouTube: live
@@ -48,7 +50,9 @@ export default function Home() {
           >
             {BRAND.title}
           </h1>
+
           <p className="text-neutral-300">{BRAND.bio}</p>
+
           <p className="text-neutral-400 text-sm">
             Cooperations:{" "}
             <a
@@ -60,20 +64,21 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Links mit Badges */}
+        {/* Social Links */}
         <div className="grid gap-3">
           {GENERALLINKS.map((l) => {
-            // YouTube mit live Counter
+            // YouTube mit Live-Counter
             if (l.label === "YouTube") {
               return (
                 <Link
                   key={l.href + l.label}
                   href={l.href}
                   target="_blank"
-                  className="relative flex items-center justify-center gap-2 
-                     rounded-2xl bg-white/10 hover:bg-white/15 active:bg-white/20 
-                     px-5 py-3 text-base font-medium ring-1 ring-white/10 
-                     hover:ring-emerald-500/40 transition"
+                  rel="noopener noreferrer"
+                  className="relative flex items-center justify-center gap-2
+                    rounded-2xl bg-white/10 hover:bg-white/15 active:bg-white/20
+                    px-5 py-3 text-base font-medium ring-1 ring-white/10
+                    hover:ring-emerald-500/40 transition"
                 >
                   <div className="flex items-center gap-2">
                     <img
@@ -86,9 +91,9 @@ export default function Home() {
 
                   {typeof ytCount === "number" && (
                     <span
-                      className="absolute right-4 rounded-full 
+                      className="absolute right-4 rounded-full
                         px-3 py-1 text-sm font-extrabold tabular-nums
-                        text-black bg-red-500 
+                        text-black bg-red-500
                         border border-green-500
                         shadow-[0_0_6px_#22c55e]"
                     >
@@ -106,10 +111,11 @@ export default function Home() {
                   key={l.href + l.label}
                   href={l.href}
                   target="_blank"
-                  className="relative flex items-center justify-center gap-2 
-                     rounded-2xl bg-white/10 hover:bg-white/15 active:bg-white/20 
-                     px-5 py-3 text-base font-medium ring-1 ring-white/10 
-                     hover:ring-emerald-500/40 transition"
+                  rel="noopener noreferrer"
+                  className="relative flex items-center justify-center gap-2
+                    rounded-2xl bg-white/10 hover:bg-white/15 active:bg-white/20
+                    px-5 py-3 text-base font-medium ring-1 ring-white/10
+                    hover:ring-emerald-500/40 transition"
                 >
                   <div className="flex items-center gap-2">
                     <img
@@ -121,9 +127,9 @@ export default function Home() {
                   </div>
 
                   <span
-                    className="absolute right-4 rounded-full 
+                    className="absolute right-4 rounded-full
                       px-3 py-1 text-sm font-extrabold tabular-nums
-                      text-black bg-red-500 
+                      text-black bg-red-500
                       border border-green-500
                       shadow-[0_0_6px_#22c55e]"
                   >
@@ -140,10 +146,11 @@ export default function Home() {
                   key={l.href + l.label}
                   href={l.href}
                   target="_blank"
-                  className="relative flex items-center justify-center gap-2 
-                     rounded-2xl bg-white/10 hover:bg-white/15 active:bg-white/20 
-                     px-5 py-3 text-base font-medium ring-1 ring-white/10 
-                     hover:ring-emerald-500/40 transition"
+                  rel="noopener noreferrer"
+                  className="relative flex items-center justify-center gap-2
+                    rounded-2xl bg-white/10 hover:bg-white/15 active:bg-white/20
+                    px-5 py-3 text-base font-medium ring-1 ring-white/10
+                    hover:ring-emerald-500/40 transition"
                 >
                   <div className="flex items-center gap-2">
                     <img
@@ -155,9 +162,9 @@ export default function Home() {
                   </div>
 
                   <span
-                    className="absolute right-4 rounded-full 
+                    className="absolute right-4 rounded-full
                       px-3 py-1 text-sm font-extrabold tabular-nums
-                      text-black bg-red-500 
+                      text-black bg-red-500
                       border border-green-500
                       shadow-[0_0_6px_#22c55e]"
                   >
@@ -173,10 +180,11 @@ export default function Home() {
                 key={l.href + l.label}
                 href={l.href}
                 target="_blank"
-                className="flex items-center justify-center gap-2 
-                   rounded-2xl bg-white/10 hover:bg-white/15 active:bg-white/20 
-                   px-5 py-3 text-base font-medium ring-1 ring-white/10 
-                   hover:ring-emerald-500/40 transition"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2
+                  rounded-2xl bg-white/10 hover:bg-white/15 active:bg-white/20
+                  px-5 py-3 text-base font-medium ring-1 ring-white/10
+                  hover:ring-emerald-500/40 transition"
               >
                 <img src={l.icon} alt={`${l.label} Logo`} className="w-5 h-5" />
                 <span>{l.label}</span>
@@ -185,36 +193,41 @@ export default function Home() {
           })}
         </div>
 
-        {/* Teileliste */}
-        <div className="text-center">
-          <h2 className={`${anton.className} text-3xl font-semibold mb-3`}>
-            Teileliste
-          </h2>
-          <h3 className="text-sm text-neutral-300 mb-3">
-            Hinweis: Einige Links sind Affiliate-Links – Preis für dich gleich,
-            kleine Unterstützung für mich 🛠️
-          </h3>
-          <div className="grid gap-3 justify-items-center">
-            {LINKSFAHRZEUG1.map((l) => (
-              <Link
-                key={l.href + l.label}
-                href={l.href}
-                target="_blank"
-                className="w-full max-w-md rounded-2xl 
-                   bg-red-500
-                   border-4 border-green-600
-                   px-5 py-3 text-base font-extrabold 
-                   text-black
-                   shadow-md
-                   hover:bg-red-400 hover:border-green-500
-                   hover:scale-[1.03] hover:shadow-lg 
-                   transition-all duration-200"
-              >
-                {l.label}
-              </Link>
-            ))}
+        {/* Teileliste aktuell deaktiviert */}
+        {SHOW_PARTS_LIST && (
+          <div className="text-center">
+            <h2 className={`${anton.className} text-3xl font-semibold mb-3`}>
+              Teileliste
+            </h2>
+
+            <h3 className="text-sm text-neutral-300 mb-3">
+              Hinweis: Einige Links sind Affiliate-Links – Preis für dich
+              gleich, kleine Unterstützung für uns 🛠️
+            </h3>
+
+            <div className="grid gap-3 justify-items-center">
+              {LINKSFAHRZEUG1.map((l) => (
+                <Link
+                  key={l.href + l.label}
+                  href={l.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full max-w-md rounded-2xl
+                    bg-red-500
+                    border-4 border-green-600
+                    px-5 py-3 text-base font-extrabold
+                    text-black
+                    shadow-md
+                    hover:bg-red-400 hover:border-green-500
+                    hover:scale-[1.03] hover:shadow-lg
+                    transition-all duration-200"
+                >
+                  {l.label}
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </main>
   );
