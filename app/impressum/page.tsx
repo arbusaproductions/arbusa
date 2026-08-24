@@ -5,6 +5,7 @@ export default function Impressum() {
 
       <section>
         <h2 className="text-lg font-semibold mb-2">Angaben gemäß § 5 DDG</h2>
+
         <p>
           Arbusa Productions GbR
           <br />
@@ -18,11 +19,13 @@ export default function Impressum() {
 
       <section>
         <h2 className="text-lg font-semibold mb-2">Vertreten durch</h2>
+
         <p>Richard Petrauskas und Thomas Petrauskas</p>
       </section>
 
       <section>
         <h2 className="text-lg font-semibold mb-2">Kontakt</h2>
+
         <p>
           E-Mail:{" "}
           <a
@@ -31,6 +34,11 @@ export default function Impressum() {
           >
             arbusa.productions@gmail.com
           </a>
+          <br />
+          Kontaktformular:{" "}
+          <a href="/kontakt" className="underline hover:text-emerald-400">
+            www.arbusaproductions.com/kontakt
+          </a>
         </p>
       </section>
 
@@ -38,6 +46,7 @@ export default function Impressum() {
         <h2 className="text-lg font-semibold mb-2">
           Umsatzsteuer-Identifikationsnummer
         </h2>
+
         <p>
           Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG i. V. m. § 5 Abs.
           1 Nr. 6 DDG:
@@ -50,6 +59,7 @@ export default function Impressum() {
         <h2 className="text-lg font-semibold mb-2">
           Inhaltlich Verantwortlicher
         </h2>
+
         <p>
           Verantwortlicher für journalistisch-redaktionelle Inhalte gemäß § 18
           Abs. 2 MStV:
@@ -66,6 +76,7 @@ export default function Impressum() {
 
       <section>
         <h2 className="text-lg font-semibold mb-2">Verbraucherschlichtung</h2>
+
         <p>
           Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren
           vor einer Verbraucherschlichtungsstelle teilzunehmen (§ 36 VSBG).
@@ -74,12 +85,14 @@ export default function Impressum() {
 
       <section>
         <h2 className="text-lg font-semibold mb-2">Datenschutz</h2>
+
         <p>
           Informationen zum Umgang mit Ihren personenbezogenen Daten finden Sie
-          in unserer Datenschutzerklärung unter:{" "}
+          in unserer{" "}
           <a href="/datenschutz" className="underline hover:text-emerald-400">
-            www.arbusaproductions.com/datenschutz
+            Datenschutzerklärung
           </a>
+          .
         </p>
       </section>
     </main>
